@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+<div class="all-requests">
+    {% for req in requests %}
+    <p style="color:white">
+        <a href="{% url 'person' pk=req.pk %}">{{ req.player_request_name2 }} {{ req.player_request_name }}</a>
+    </p>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

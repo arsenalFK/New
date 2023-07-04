@@ -1,0 +1,43 @@
+.logo {
+    width: 162px;
+    float: left;
+    height: 71px;
+}
+
+.logo a {
+    margin-top: 12px;
+    padding: 0;
+    display: block;
+    font-size: 29px;
+    font-family: 'Exo 2', sans-serif;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.a1 {
+    color:red;
+    font-size: 30px;
+}
+
+.rs {
+    color:azure;
+}
+
+.en {
+    color:crimson;
+}
+
+.a2 {
+    color:aliceblue;
+}
+
+.l {
+    color: red;
+}
+
+.fk {
+    color:red;
+
+    font-size: 29px;
+}

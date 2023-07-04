@@ -1,0 +1,82 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/log.css' %}">
+
+
+
+{% if user.is_staff %}
+<ul>
+    <li><a style="color:white">Користувач: {{user.first_name}} {{user.last_name}}</a></li>
+    <h5><a style="color:white" href="{% url 'logout' %}">Вийти</a></h5>
+</ul>
+
+<div class="cabinet-img">
+    <a href="{% url 'all_players' %}"><img src="{% static '7.jpg' %}" width="90px" height="105px">
+    <p>Усі гравці</p></a>
+    <a href="{% url 'all_requests' %}"><img src="{% static '1234.jpg' %}" width="90px" height="105px">
+    <p>Усі заяви</p></a>
+    <a href="{% url 'add_player' %}"><img src="{% static '9.jpg' %}" width="90px" height="105px">
+    <p>Додати гравця</p></a>
+    <a href="{% url 'contacts' %}"><img src="{% static '10.png' %}" width="90px" height="105px">
+    <p>Контакти</p></a>
+</div>
+
+{% else %}
+<p style="color:white">Для тесту використовуйте логін Newuser пароль testpass1 </p>
+
+<div class="form-m">
+    <h1>Вхід</h1>
+        <form class="form-l" method="post">
+            {% csrf_token%}
+            {{ form.as_p }}
+            <button type="submit">Увійти</button>
+        </form>
+</div>
+
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="form">
+    <h1>Вход</h1>
+        <div class="input-form">
+           <input type="text" placeholder="Логин">
+        </div>
+        <div class="input-form">
+            <input type="password" placeholder="Пароль">
+        </div>
+    <div class="input-form">
+        <input type="submit" value="Войти">
+    </div>
+    <a href="#" class="forget">Забыли пароль? </a>
+
+</div><-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

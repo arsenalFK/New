@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+<div class="members-add">
+    <div class="add" style="color:azure" align="left">
+        <p>Опис команди</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi sequi, eligendi deserunt aliquid quis autem error repellendus aliquam! Consequuntur dicta minima enim similique laboriosam dignissimos beatae ab cum voluptates itaque.</p>
+        <p>- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, accusantium! </p>
+        <p>- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, accusantium! </p>
+        <p> Бажаєш приєднатись?<a href="{% url 'add_to_team' %}"> ТИСНИ СЮДИ</a>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

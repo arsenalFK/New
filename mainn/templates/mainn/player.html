@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><strong><p>Забитих голів - {{ player.goals }}</p></strong></h5>
+        <h5 class="card-title"><strong><p>Пропущено матчів - {{ player.missed }}</p></strong></h5>
+        <h5 class="card-title"><strong><p><img src="{% static '54c0cacc51f01.jpg' %}" width="48px"> - {{ player.yellow }}</p></strong></h5>
+        <h5 class="card-title"><strong><p><img src="{% static 'kart2.png' %}" width="48px"> - {{ player.red }}</p></strong></h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock%}

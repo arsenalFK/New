@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+{% block content %}
+{% load static %}
+
+{% for new in news %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="carding">
+                {% if user.is_staff %}
+                    <h5><a href="{% url 'add_n' %}">Додати пост</a></h5>
+                {% endif %}
+
+                <div class="card">
+                    <div class="post_info">
+                        <div class="post_name"><h2><a href="">{{ new.news_title }}</a></h2></div>
+                        {% if new.news_image %}
+                        <img src="{{new.news_image.url}}" alt="My Image" width="100%">
+                        {% endif %}
+                        <div class="post_text"><p>{{ new.news_text|linebreaksbr|safe }}</p>
+                            <div class="post_date">Опубліковано: <strong>{{ new.news_date }}</strong></p></div>
+                            <div class="post_likes">
+                                <img src="{% static 'like.jpg' %}" width="25px" height="25px">Likes: {{ new.news_likes }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endfor %}
+{% endblock %}
