@@ -12,11 +12,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY'), '*fszmxf9x=@ea&onf0h)0@m2t(n(==isz4v7ujzk#i9p19jq+0'
+SECRET_KEY = '*fszmxf9x=@ea&onf0h)0@m2t(n(==isz4v7ujzk#i9p19jq+0'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
-DEBUG = bool(os.environ.get('DJANGO_SECRET_KEY', True))
+DEBUG = True
+
 
 ALLOWED_HOSTS = ['127.0.0.1', 'arsenal.pythonanywhere.com']
 
@@ -131,3 +132,8 @@ MIN_PLAYER_AGE = 14
 MAX_PLAYER_AGE = 61
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
+
+
+
+
